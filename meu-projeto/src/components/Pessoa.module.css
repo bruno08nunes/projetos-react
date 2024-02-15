@@ -1,0 +1,9 @@
+.fraseContainer {
+    background-color: #333;
+    border: 1px solid black;
+}
+
+h2.fraseContent {
+    color: white;
+    margin: 0;
+}
