@@ -1,0 +1,57 @@
+{
+  "projects": [
+    {
+      "id": "0a58",
+      "name": "Primeiro Projeto",
+      "budget": "1000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "d0c8",
+      "name": "Segundo Projeto",
+      "budget": "100000",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 15124,
+      "services": [
+        {
+          "name": "Contratar",
+          "cost": "1000",
+          "description": "Contrata alguém aí",
+          "id": "4884635b-49d5-4727-adc7-1493ba39286a"
+        },
+        {
+          "name": "Teste",
+          "cost": "14124",
+          "description": "Teste",
+          "id": "bd080fe1-c7a4-45ab-8772-ce380e2c0264"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Design"
+    },
+    {
+      "id": "4",
+      "name": "Planejamento"
+    }
+  ]
+}

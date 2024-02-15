@@ -1,0 +1,18 @@
+.projectContainer {
+    padding: 2em;
+    width: 100%;
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+@media screen and (max-width: 500px) {
+    .titleContainer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+}

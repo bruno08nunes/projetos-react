@@ -1,0 +1,23 @@
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.containerGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.start {
+    justify-content: flex-start;
+}
+
+.column {
+    flex-direction: column;
+    justify-content: flex-start;
+}
