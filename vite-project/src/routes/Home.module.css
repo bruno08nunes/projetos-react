@@ -1,0 +1,25 @@
+.section, .favoritos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+    padding: 20px;
+    font-size: 3em;
+}
+
+:is(.section, .favoritos) div {
+    aspect-ratio: 1/1;
+    max-height: 400px;
+    background-color: aqua;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    &:hover {
+        scale: 1.1;
+    }
+}
+
+.favoritos div,
+div.favoritos {
+    background-color: tomato;
+}

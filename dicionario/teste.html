@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        />
+        <style>
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                max-width: 1000px;
+                margin: auto;
+                font-size: 1.5rem;
+            }
+            form > div {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                & > div {
+                    display: flex;
+                    & > input {
+                        flex: 1;
+                    }
+                    & > button {
+                        padding: 0 15px;
+                    }
+                }
+            }
+            form input {
+                font-size: 1.5rem;
+                padding: 10px;
+            }
+            form > div:has(> button) {
+                flex-direction: row;
+                gap: 10px;
+                & > button {
+                    padding: 15px;
+                    cursor: pointer;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <form method="get" action="#">
+            <div>
+                <label for="nome">Nome: </label>
+                <input
+                    type="text"
+                    name="nome"
+                    id="nome"
+                    placeholder="Nome"
+                    required
+                    autocomplete="given-name"
+                />
+            </div>
+            <div>
+                <label for="sobrenome">Sobrenome: </label>
+                <input
+                    type="text"
+                    name="sobrenome"
+                    id="sobrenome"
+                    placeholder="Sobrenome"
+                    required
+                    autocomplete="family-name"
+                />
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="email@email"
+                    required
+                    autocomplete="email"
+                />
+            </div>
+            <div>
+                <label for="senha">Senha: </label>
+                <div>
+                    <input
+                        type="password"
+                        name="senha"
+                        id="senha"
+                        placeholder="Senha"
+                        required
+                        minlength="8"
+                        autocomplete="new-password"
+                    />
+                    <button type="button">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <button type="submit">Enviar Formulário</button>
+                <button type="reset">Limpar Formulário</button>
+            </div>
+        </form>
+
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            if (params.get("nome")) {
+                for (let [key, value] of params) {
+                    document.querySelector(`#${key}`).value = value;
+                }
+            }
+            const passwordButton = document.querySelector(
+                "button[type='button']",
+            );
+            passwordButton.addEventListener("click", () => {
+                document.querySelector("#senha").type =
+                    document.querySelector("#senha").type === "password"
+                        ? "text"
+                        : "password";
+            });
+        </script>
+    </body>
+</html>

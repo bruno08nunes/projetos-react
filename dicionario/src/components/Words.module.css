@@ -1,0 +1,17 @@
+.divPalavras {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    column-gap: 100px;
+    padding: 10px 50px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.divPalavras p {
+    background-color: lightgray;
+    padding: 15px;
+    font-size: 2em;
+    border-radius: 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Formulário</title>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <script type="module" src="main.js"></script>
+    </head>
+    <body>
+        <header class="cabeçalho-principal">
+            <h1>LOGO</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">LINK</a>
+                    </li>
+                    <li>
+                        <a href="#">LINK</a>
+                    </li>
+                    <li>
+                        <a href="#">LINK</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main-form">
+            <section class="section-form">
+                <h2>Cadastre-se já</h2>
+                <form action="#" class="form-login">
+                    <fieldset>
+                        <legend>Informações Básicas</legend>
+                        <div class="div-form-nomes">
+                            <div>
+                                <label for="nome">Nome: </label>
+                                <input
+                                    type="text"
+                                    name="nome"
+                                    id="nome"
+                                    placeholder="Nome"
+                                    autocomplete="given-name"
+                                    required
+                                    minlength="2"
+                                    maxlength="35"
+                                    pattern="[a-zA-Z\u00C0-\u00FF\s\-']{2,35}"
+                                />
+                                <div class="error-message"></div>
+                            </div>
+                            <div>
+                                <label for="sobrenome">Sobrenome: </label>
+                                <input
+                                    type="text"
+                                    name="sobrenome"
+                                    id="sobrenome"
+                                    placeholder="Sobrenome"
+                                    autocomplete="family-name"
+                                    required
+                                    minlength="2"
+                                />
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email">Email: </label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="Email"
+                                autocomplete="email"
+                                required
+                                minlength="3"
+                            />
+                            <div class="error-message"></div>
+                        </div>
+                        <div>
+                            <label for="password">Senha: </label>
+                            <div class="password">
+                                <input
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    placeholder="Senha"
+                                    autocomplete="new-password"
+                                    required
+                                    minlength="8"
+                                    maxlength="25"
+                                />
+                                <button data-type-input="password">
+                                    <span class="material-symbols-outlined">
+                                        visibility
+                                    </span>
+                                </button>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="confirm-password"
+                                >Confirme sua senha:
+                            </label>
+                            <div class="password">
+                                <input
+                                    type="password"
+                                    name="confirm-password"
+                                    id="confirm-password"
+                                    placeholder="Confirme sua senha"
+                                    autocomplete="new-password"
+                                    required
+                                    minlength="8"
+                                    maxlength="25"
+                                />
+                                <button data-type-input="confirm-password">
+                                    <span class="material-symbols-outlined">
+                                        visibility
+                                    </span>
+                                </button>
+                                <div class="error-message"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <label for="birthday">Data de Nascimento: </label>
+                            <input
+                                type="date"
+                                name="birthday"
+                                id="birthday"
+                                autocomplete="bday"
+                                required
+                                min="1900-01-01"
+                                max="2010-31-31"
+                            />
+                        </div>
+                        <div class="error-message"></div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Endereço</legend>
+                        <div>
+                            <label for="cep">CEP: </label>
+                            <input
+                                type="text"
+                                name="cep"
+                                id="cep"
+                                placeholder="CEP"
+                                required
+                            />
+                            <div class="error-message"></div>
+                        </div>
+                        <div>
+                            <label for="country">País: </label>
+                            <input
+                                type="text"
+                                name="country"
+                                id="country"
+                                placeholder="País"
+                                autocomplete="country-name"
+                                required
+                            />
+                            <div class="error-message"></div>
+                        </div>
+                        <div>
+                            <label for="state">Estado: </label>
+                            <input
+                                type="text"
+                                name="state"
+                                id="state"
+                                placeholder="Estado"
+                                autocomplete="address-level1"
+                                required
+                            />
+                            <div class="error-message"></div>
+                        </div>
+                        <div>
+                            <label for="city">Cidade: </label>
+                            <input
+                                type="text"
+                                name="city"
+                                id="city"
+                                placeholder="Cidade"
+                                autocomplete="address-level2"
+                                required
+                            />
+                            <div class="error-message"></div>
+                        </div>
+                        <div>
+                            <label for="street">Rua: </label>
+                            <input
+                                type="text"
+                                name="street"
+                                id="street"
+                                placeholder="Rua"
+                                autocomplete="address-line1"
+                                required
+                            />
+                            <div class="error-message"></div>
+                        </div>
+                    </fieldset>
+                    <div class="div-button">
+                        <button type="submit">Enviar Formulário</button>
+                        <button type="reset">Limpar Formulário</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer class="footer">
+            <address>&copy; Bruno Nunes</address>
+        </footer>
+    </body>
+</html>

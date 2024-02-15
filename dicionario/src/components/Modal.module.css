@@ -1,0 +1,38 @@
+.backdrop {
+    z-index: 10;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.801);
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    animation: aparecer .4s forwards;
+}
+
+.modal {
+    background-color: darkgray;
+    width: 70vw;
+    height: 90vh;
+    height: 90svh;
+    padding: 30px;
+    border-radius: 25px;
+    cursor: default;
+}
+
+.modal h2 {
+    font-size: 3em;
+}
+
+.modal p {
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

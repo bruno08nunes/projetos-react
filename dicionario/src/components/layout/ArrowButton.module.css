@@ -1,0 +1,13 @@
+.arrowButton {
+    font-size: 1.5em;
+    background-color: transparent;
+    padding: 0 15px;
+    border: 0;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: .4s rotate;
+    &.aberto {
+        rotate: -90deg;
+    }
+}

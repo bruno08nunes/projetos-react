@@ -1,0 +1,11 @@
+.divTitulo {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+}
+
+.divTitulo h2 {
+    font-size: 2.3em;
+    font-weight: normal;
+}

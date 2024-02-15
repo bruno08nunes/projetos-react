@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                display: inline-block;
+                background-color: red;
+                min-width: 30px;
+                min-height: 30px;
+            }
+            #divDropavel {
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="divArrastavel" draggable="true">ASFASFASFa</div>
+        <div id="divDropavel" draggable="true"></div>
+        <script>
+            const divs = document.querySelectorAll("div");
+            let done;
+            divs.forEach((div) => {
+                div.addEventListener("dragstart", (e) => {
+                    e.dataTransfer.setData("text", e.target.textContent);
+                });
+                div.addEventListener("dragover", (e) => {
+                    e.preventDefault();
+                });
+                div.addEventListener("drop", (e) => {
+                    e.preventDefault();
+                    e.target.textContent = e.dataTransfer.getData("text");
+                    done = true;
+                });
+                div.addEventListener("dragend", (e) => {
+                    setTimeout(() => {
+                        console.log(done)
+                        if (done) {
+                            e.target.textContent = "";
+                            done = false;
+                        }
+                    }, 1)
+                });
+            });
+        </script>
+    </body>
+</html>

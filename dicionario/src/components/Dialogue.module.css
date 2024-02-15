@@ -1,0 +1,28 @@
+.dialogue {
+    background-color: lightgray;
+    margin-top: 20px;
+    font-size: 1.3em;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow: hidden;
+    animation: abrir .8s;
+    transform-origin: top center;
+    animation: abrir .7s forwards;
+    overflow: hidden;
+}
+
+.dialogue p {
+    padding: 10px 15px;
+}
+
+@keyframes abrir {
+    from {
+        height: 0;
+    }
+    to {
+        height: 300px;
+    }
+}
